@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header>
+    <h1>"BREAK' inDEX"</h1>
+  </header>
+<p class=text>This is the moves page. Clicking "Add Move" will allow you to add a move to your collection. Clicking on a move will show you more details about it. Clicking "Delete Move" will delete the move from your collection. The "Clear All Moves" is kinda something for Debugging so too many moves don't get added. It clears them all. But it's only for Development since the feature to save the moves to an account hasn't been activated yet, so moves just dissapear after reloading but are still saved in local storage. Eventually I will move it to a backend (But backends are confusing). </p>
+  <div id="sideMenu" class="side-menu"> 
+    <button id="menuToggle" onclick="toggleMenu()">☰</button>
+    <ul>
+      <li><a href="index.html"><img src="home-icon.png" alt="Home" class="menu-icon"></a></li>
+      <li><a href="Moves.html"><img src="moves-icon.png" alt="Moves & Variations" class="menu-icon2"></a></li>
+      <li><a href="Transitions.html">Transitions</a></li>
+      <li><a href="Sets.html"><img src="Sets-icon.png" alt="Sets" class="menu-icon2"></a></li>
+    </ul>
+ 
+    </div>
+ 
+
+    <!-- Container for moves -->
+    <div id="moveContainer"></div>
+    
+    <!-- Add Move Button -->
+    <div class="add-move-container">
+      <button id="MoveBtn" class="btn-primary">
+        ➕ Add Move
+      </button>
+      <button onclick="clearStorage()" class="btn-primary" style="margin-left: 10px; background-color: #ff0000;">
+        Clear All Moves
+      </button>
+    </div>
+  </div>
+
+  <!-- Add Move Dialog (hidden by default) -->
+  <div id="MoveMake" class="modal" style="display: none;">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 class="modal-title">Add New Move</h2>
+        <button class="modal-close-btn">×</button>
+      </div>
+      <div class="modal-content">
+        <form id="add-move-form">
+          <div class="form-group">
+            <label for="move-name">Move Name</label>
+            <input type="text" id="move-name" name="name" required placeholder="e.g., CC, Windmill, Flare">
+          </div>
+          <div class="form-group">
+            <label for="move-notes">Move Notes</label>
+            <input type="text" id="move-notes" name="notes" required placeholder="Notes?...">
+          </div>
+          <div class="form-group">
+            <label for="move-category">Category</label>
+            <select id="move-category" name="category" required>
+              <option value="">Select category</option>
+              <option value="Toprock">Toprock</option>
+              <option value="Footwork">Footwork</option>
+              <option value="Power">Power</option>
+              <option value="Freeze">Freeze</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="move-image">Move Image</label>
+            <input type="file" id="move-image" accept="image/*" required>
+          </div>
+
+          <button type="submit" class="btn-primary">Save Move</button>
+  <!-- Move Cards Container -->
+    <div id="moveContainer"></div>
+    
+   
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

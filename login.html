@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<div id="content" class="content">
+  <div id="auth-section" class="auth-form">
+    <div class="tab-buttons">
+      <button onclick="showLogin()" class="tab-btn active" id="loginTab">Login</button>
+      <button onclick="showSignup()" class="tab-btn" id="signupTab">Sign Up</button>
+    </div>
+
+    <div id="login-section" class="form-section">
+      <form id="loginForm" onsubmit="return handleLogin(event)">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <div id="loginStatus"></div>
+    </div>
+
+    <div id="signup-section" class="form-section" style="display: none;">
+      <form id="signupForm" onsubmit="return handleSignup(event)">
+        <input type="text" id="newUsername" placeholder="Choose Username" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="password" id="newPassword" placeholder="Choose Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <div id="signupStatus"></div>
+    </div>
+    <div id="recovery-section" class="form-section" style="display: none;">
+      <form id="recoveryForm" onsubmit="return handleRecovery(event)">
+        <input type="email" id="recoveryEmail" placeholder="Enter Email" required>
+        <button type="submit">Reset Password</button>
+      </form>
+      <div id="recoveryStatus"></div>
+    </div>
+  </div>
+</div>

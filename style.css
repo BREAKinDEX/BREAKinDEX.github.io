@@ -1,0 +1,362 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: cursive;
+  margin: 15;
+  padding: 4;
+  background-color: #050e29;
+  color: #000000;
+  transition: background-color 0.3s;
+  overflow-y: scroll; /* Add vertical scrollbar */
+  height: 800vh; /* Set height for scrollbar functionality */
+  scrollbar-width: 0;
+  scrollbar-color: transparent transparent;
+
+
+}
+.menu-icon5 {
+  padding: 4px;
+  left: 40px;
+  width: 200px;
+  height: 30px;
+  align-items: center;
+}
+.text {color: white;
+    }
+body::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar width */
+  background: transparent; /* Optional: make background transparent */
+}
+
+header h1 {
+  background-color: #04ff00; 
+  color: #02502b;
+  text-align: left;
+  font-size: 20;
+  font-family: Jazz LET, Open Sans;
+  padding: 10px 30px; 
+  border: 1px solid #00a331; 
+  border-radius: 5px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px; 
+  height: 150px;
+  padding-top: 35px;}
+
+#menuToggle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  background: #0a1b4d;
+  border: none;
+  border-radius: 20%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #04ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-menu {
+  position: fixed;
+  left: -250px; /* Hide the menu offscreen */
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #09031c;
+  color: #fff;
+  transition: left 0.3s ease;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+.side-menu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.menu-icon {
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.menu-icon2 {
+  padding: 4px;
+  width: 200px;
+  height: 30px;
+  vertical-align: middle;
+}
+.side-menu li a:hover {
+  background-color: #575757;
+}
+.content {
+  margin-left: 20px; /* Adjust content position */
+  padding: 200px;
+}
+
+.auth-form {
+  background-color: #0a1b4d;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+  margin: 100px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-buttons {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #081538;
+  color: #04ff00;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #04ff00;
+  color: #02502b;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-section button {
+  width: 100%;
+  padding: 100px;
+  background: #04ff00;
+  color: #02502b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#loginStatus, #signupStatus {
+  margin-top: 1000px;
+  color: #04ff00;
+}
+
+#moveContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.move-card {
+  border: 1px solid #ff00a2;
+  padding: 10px;
+  width: 180px;
+  margin: 8px;
+  background: #0a1b4d;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.move-icon {
+  cursor: pointer;
+  text-align: center;
+}
+
+.move-icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  transition: transform 0.2s;
+}
+
+.move-icon:hover img {
+  transform: scale(1.1);
+}
+
+.move-name {
+  display: block;
+  color: #04ff00;
+  font-size: 14px;
+}
+
+.move-details {
+  margin-top: 15px;
+}
+
+.move-details.hidden {
+  display: none;
+}
+
+.full-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.move-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.move-card h3 {
+  color: #04ff00;
+  margin: 10px 0;
+}
+
+.move-card p {
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.deleteBtn {
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.deleteBtn:hover {
+  background: #cc0000;
+}
+
+#moveContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #ff00a2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.add-move-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.btn-primary {
+  background-color: #ff00a2;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background-color: #ff00a2;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ff00a2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+.modal-footer {
+  padding: 1rem;
+  border-top: 1px solid #ff00a2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
